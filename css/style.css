@@ -3,3 +3,75 @@ body
     font-family: 'Montserrat', sans-serif;
     background-color: #48474e;
 }
+
+.mainContent
+{
+    color: #ff4c68;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.mainContent h1
+{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.mainContent h2
+{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.setOfButton
+{
+    text-align: center;
+    margin: auto;
+}
+
+.buttonHolder
+{
+    text-align: center;
+    display: inline-block;
+}
+
+.buttonHolder h3
+{
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #ff7b8f;
+}
+
+.soundButton
+{
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin: 10px;   
+    text-align: center;
+    border-style: dashed;
+    border-radius: 0px;
+    border-color: #ff4c68;
+    background-color: #57465a;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+}
+
+.soundButton:hover
+{
+    background-color: #826986;
+}
+
+footer
+{
+    color: #ff4c68;
+    text-align: center;
+}
+
+footer a
+{
+    color: #ff4c68;
+    text-decoration: none;
+    font-weight: 600;
+}
