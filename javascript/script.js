@@ -1,10 +1,9 @@
 //Select Array of sound button elements
 const soundButton = document.querySelectorAll(".soundButton");
 
-//Test if all the button can be pressed and display an alert
-for (let index = 0; index < soundButton.length; index++) {
-    soundButton[index].addEventListener("click", playAudio);
-    soundButton[index].addEventListener("click", buttonPressed);
+//Make the button have event listener
+for (let i = 0; i < soundButton.length; i++) {
+    soundButton[i].addEventListener("click", playAudio);
 }
 
 //Test function if button is pressed
@@ -14,47 +13,51 @@ function buttonTest()
 }
 
 //Play audio function
-var audio = new Audio('audio/bruh.mp3');
 function playAudio()
 {
-    //Set random playbackrate
-    let playbackSpeed = Math.random() + 0.1;
-    if(playbackSpeed > 1){ playbackSpeed = 1;}
-    audio.playbackRate = playbackSpeed;
-    
-    audio.play();   
-    console.log(audio.playbackRate);
-}
+    //Get the innerHTML button key
+    var pressedKey = this.innerHTML;
+    console.log(pressedKey);
 
-function buttonPressed()
-{
-    this.style.backgroundColor = "red";
-}
+    //Check what innerHTML button key is pressed
+    switch(pressedKey)
+    {
+        case "W":
+            var bruh = new Audio("audio/bruh.mp3");
+            bruh.play();
+            break; 
 
-//Code below exist just to make an experiment
-//about var objects
-var car = {
-    name: "Toyota",
-    color: "Red",
-    horseSpeed: "144 km/h",
-    isAvailable: false,
-    uniqueFeature: ["Fast", "Easy to drive", "Extended storage"],
-    goodies: {
-        name: "Sleeping bag",
-        qty: 1
+        case "A":
+            var huh = new Audio("audio/huh.mp3");
+            huh.play();
+            break;
+
+        case "S":
+            var vine_boom = new Audio("audio/vine_boom.mp3");
+            vine_boom.play();
+            break;
+
+        case "D":
+            var oof = new Audio("audio/oof.m4a");
+            oof.play();
+            break;
+
+        case "J":
+            var hell_kitchen = new Audio("audio/hell_kitchen.MP3");
+            hell_kitchen.play();
+            break;
+
+        case "K":
+            var fus_ro_dah = new Audio("audio/fus_ro_dah.mp3");
+            fus_ro_dah.play();
+            break;
+
+        case "L":
+            var bonk = new Audio("audio/bonk.MP3");
+            bonk.play();
+            break;
+
+        default:
+            console.log(pressedKey);
     }
-};
-console.log(car.name + " " + car.goodies.name);
-
-//Code below exist just to make an experiment
-//about constructor function
-function Car(name, color, horseSpeed, isAvailable)
-{
-    this.name = name;
-    this.color = color;
-    this.horseSpeed = horseSpeed;
-    this.isAvailable = isAvailable;
 }
-
-var car1 = new Car("Nissan", "Blue", "120km/h", true);
-console.log(car1.color);
