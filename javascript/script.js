@@ -48,8 +48,8 @@ function playAudio()
             break;
 
         case "K":
-            var fus_ro_dah = new Audio("audio/fus_ro_dah.mp3");
-            fus_ro_dah.play();
+            var metal_pipe = new Audio("audio/metal_pipe.mp3");
+            metal_pipe.play();
             break;
 
         case "L":
@@ -99,8 +99,8 @@ document.addEventListener("keydown", function(event){
 
         case "k":
         case "K":
-            var fus_ro_dah = new Audio("audio/fus_ro_dah.mp3");
-            fus_ro_dah.play();
+            var metal_pipe = new Audio("audio/metal_pipe.mp3");
+            metal_pipe.play();
             break;
         
         case "l":
